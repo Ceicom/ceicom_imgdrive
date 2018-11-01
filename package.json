@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "documentation build handle-file.js -f md -o DOCUMENTATION.md"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "node-dir": "^0.1.17"
   },
   "devDependencies": {
+    "documentation": "^8.1.2",
     "nodemon": "^1.17.5"
   }
 }

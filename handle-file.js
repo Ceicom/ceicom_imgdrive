@@ -1,9 +1,11 @@
-/** Class with functions to handle files */
+/** 
+ * Class with functions to handle files 
+ * @author Keller Kichel
+ * */
 module.exports = class HandleFile {
 
     /**
      * Initialize the allowedEXT array with the allowed extensions
-     * 
      * @param {Object} req.query
      */
     constructor({ ext, addext }) {
@@ -13,9 +15,13 @@ module.exports = class HandleFile {
 
     /**
      * Remove base folder from the passed folder path
+     * @example
+     *   // return "media/noticias/diversas/imagem.jpg"
+     * handleFile.adjustPath('C:/Compartilhada/media/noticias/diversas/imagem.jpg', 'C:/Compartilhada');
      * 
      * @param {String} folder 
      * @param {String} base 
+     * 
      * @returns {String} Clean path
      */
     adjustPath(folder, base) {
@@ -24,7 +30,6 @@ module.exports = class HandleFile {
 
     /**
      * Add extension to allowed extension list
-     * 
      * @param {String} ext - Can be comma separated strings
      */
     addExtension(ext) {
@@ -38,7 +43,6 @@ module.exports = class HandleFile {
 
     /**
      * Remove extension from allowed extension list
-     * 
      * @param {String} ext - Can be comma separated strings
      */
     removeExtension(ext) {
@@ -52,9 +56,9 @@ module.exports = class HandleFile {
 
     /**
      * Adjust path to return a JSON Object
-     * 
      * @param {String} paths 
      * @param {String} base 
+     * 
      * @returns {Object} JSON Object
      */
     dealPaths(paths, base) {
@@ -79,8 +83,8 @@ module.exports = class HandleFile {
 
     /**
      * Get only the files with allowed extension
-     * 
      * @param {Array} files 
+     * 
      * @returns {Array} Allowed files
      */
     dealFiles(files) {
