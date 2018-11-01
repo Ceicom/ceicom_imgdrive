@@ -1,13 +1,13 @@
 const nivel = process.argv.length > 2 ? process.argv.slice(2)[0].split('=')[1] : 1;
-const dotdotslash = '.'.repeat(nivel);
+const dotdotslash = '../'.repeat(nivel);
 
-const express = require(dotdotslash + '/node_modules/express');
-const dir = require(dotdotslash + '/node_modules/node-dir');
-const cors = require(dotdotslash + '/node_modules/cors');
+const express = require(dotdotslash + 'midia-server/node_modules/express');
+const dir = require(dotdotslash + 'midia-server/node_modules/node-dir');
+const cors = require(dotdotslash + 'midia-server/node_modules/cors');
+const HandleFile = require(dotdotslash + 'midia-server/handle-file');
+
 const app = express();
 const basePath = '';
-
-const HandleFile = require('./handle-file');
 
 // CORS ALL DOMAIN
 app.use(cors());
