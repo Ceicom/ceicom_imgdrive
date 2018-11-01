@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "documentation build handle-file.js -f md -o DOCUMENTATION.md"
+    "docs": "documentation build handle-file.js -f md -o readme.md"
   },
   "author": "",
   "license": "ISC",
