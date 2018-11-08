@@ -86,11 +86,22 @@ module.exports = class HandleFile {
      * @param {Array} files 
      * 
      * @returns {Array} Allowed files
+     *
+     * @deprecated since version 1.1
      */
     dealFiles(files) {
         return files.filter(file => {
             const info = file.split('.');
-            return this.allowedEXT.includes(info[info.length - 1]);
+            return this.checkExt(info[info.length]);
         });
+    }
+
+    /**
+     * Validate extension with allowed extension array
+     * @param {String} extension
+     * @returns {Boolean} 
+     */
+    checkExt(ext) {
+        return this.allowedEXT.includes(ext.replace(/([^\w]*)/g,''));
     }
 }
