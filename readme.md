@@ -14,6 +14,8 @@
         -   [Parameters][10]
     -   [dealFiles][11]
         -   [Parameters][12]
+    -   [checkExt][13]
+        -   [Parameters][14]
 
 ## handle-file
 
@@ -29,8 +31,8 @@ Remove base folder from the passed folder path
 
 #### Parameters
 
--   `folder` **[String][13]** 
--   `base` **[String][13]** 
+-   `folder` **[String][15]** 
+-   `base` **[String][15]** 
 
 #### Examples
 
@@ -39,7 +41,7 @@ Remove base folder from the passed folder path
 handleFile.adjustPath('C:/Compartilhada/media/noticias/diversas/imagem.jpg', 'C:/Compartilhada');
 ```
 
-Returns **[String][13]** Clean path
+Returns **[String][15]** Clean path
 
 ### addExtension
 
@@ -47,7 +49,7 @@ Add extension to allowed extension list
 
 #### Parameters
 
--   `ext` **[String][13]** Can be comma separated strings
+-   `ext` **[String][15]** Can be comma separated strings
 
 ### removeExtension
 
@@ -55,7 +57,7 @@ Remove extension from allowed extension list
 
 #### Parameters
 
--   `ext` **[String][13]** Can be comma separated strings
+-   `ext` **[String][15]** Can be comma separated strings
 
 ### dealPaths
 
@@ -63,10 +65,10 @@ Adjust path to return a JSON Object
 
 #### Parameters
 
--   `paths` **[String][13]** 
--   `base` **[String][13]** 
+-   `paths` **[String][15]** 
+-   `base` **[String][15]** 
 
-Returns **[Object][14]** JSON Object
+Returns **[Object][16]** JSON Object
 
 ### dealFiles
 
@@ -74,9 +76,25 @@ Get only the files with allowed extension
 
 #### Parameters
 
--   `files` **[Array][15]** 
+-   `files` **[Array][17]** 
 
-Returns **[Array][15]** Allowed files
+Returns **[Array][17]** Allowed files
+
+**Meta**
+
+-   **deprecated**: since version 1.1
+
+
+### checkExt
+
+Validate extension with allowed extension array
+
+#### Parameters
+
+-   `ext`  
+-   `extension` **[String][15]** 
+
+Returns **[Boolean][18]** 
 
 [1]: #handle-file
 
@@ -102,8 +120,14 @@ Returns **[Array][15]** Allowed files
 
 [12]: #parameters-4
 
-[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[13]: #checkext
 
-[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[14]: #parameters-5
 
-[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[17]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[18]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
