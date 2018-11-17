@@ -84,9 +84,7 @@ module.exports = class HandleFile {
     /**
      * Get only the files with allowed extension
      * @param {Array} files 
-     * 
      * @returns {Array} Allowed files
-     *
      * @deprecated since version 1.1
      */
     dealFiles(files) {
